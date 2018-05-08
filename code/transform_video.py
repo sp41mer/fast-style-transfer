@@ -2,9 +2,8 @@ from __future__ import print_function
 from argparse import ArgumentParser
 import sys
 sys.path.insert(0, 'src')
-import os, random, subprocess, evaluate, shutil
-from utils import exists, list_files
-import pdb
+import random, evaluate
+from utils import exists
 
 TMP_DIR = '.fns_frames_%s/' % random.randint(0,99999)
 DEVICE = '/gpu:0'

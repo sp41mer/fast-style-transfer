@@ -1,7 +1,7 @@
 from __future__ import print_function
-import sys, os, pdb
+import sys, os
+
 sys.path.insert(0, 'src')
-import numpy as np, scipy.misc 
 from optimize import optimize
 from argparse import ArgumentParser
 from utils import save_img, get_img, exists, list_files
@@ -155,7 +155,7 @@ def main():
             preds_path = '%s/%s_%s.png' % (options.test_dir,epoch,i)
             if not options.slow:
                 ckpt_dir = os.path.dirname(options.checkpoint_dir)
-                evaluate.ffwd_to_img(options.test,preds_path,
+                evaluate.ffwd_to_img(options.test, preds_path,
                                      options.checkpoint_dir)
             else:
                 save_img(preds_path, img)
