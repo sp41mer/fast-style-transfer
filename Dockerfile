@@ -4,6 +4,9 @@ FROM kaixhin/cuda-caffe:8.0
 # Install miniconda3
 FROM continuumio/miniconda3
 
+# Install redis
+FROM redis
+
 RUN apt-get update && apt-get install -y sudo
 
 # Install pip, python, nano and all Ubuntu requirements
